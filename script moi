@@ -1,7 +1,12 @@
 do
     ply = game.Players
     plr = ply.LocalPlayer
-    Root = plr.Character.HumanoidRootPart
+    local character = plr.Character or plr.CharacterAdded:Wait()
+Root = character:WaitForChild("HumanoidRootPart")
+
+plr.CharacterAdded:Connect(function(char)
+    Root = char:WaitForChild("HumanoidRootPart")
+end)
     replicated = game:GetService("ReplicatedStorage")
     Lv = game.Players.LocalPlayer.Data.Level.Value
     TeleportService = game:GetService("TeleportService")
