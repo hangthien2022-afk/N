@@ -264,10 +264,12 @@ Attack.Alive = function(model)
     return Humanoid and Humanoid.Health > 0
 end
 Attack.Pos = function(model, dist)
-    return (Root.Position - mode.Position).Magnitude <= dist
+return (Root.Position - model.HumanoidRootPart.Position).Magnitude <= dist
 end
 Attack.Dist = function(model, dist)
-    return (Root.Position - model:FindFirstChild("HumanoidRootPart").Position).Magnitude <= dist
+    if not Root or not model or type(dist) ~= "number" then return false end
+    local part = model:FindFirstChild("HumanoidRootPart")
+    return part ~= nil and (Root.Position - part.Position).Magnitude <= dist
 end
 Attack.DistH = function(model, dist)
     return (Root.Position - model:FindFirstChild("HumanoidRootPart").Position).Magnitude > dist
