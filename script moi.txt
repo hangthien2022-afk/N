@@ -1,4 +1,4 @@
-do nguyen_aura><
+do
     ply = game.Players
     plr = ply.LocalPlayer
     Root = plr.Character.HumanoidRootPart
