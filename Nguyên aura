@@ -269,7 +269,8 @@ gay = (function()
             darkFog:Destroy()
         end
     end
-    local Water = workspace._WorldOrigin["Foam;"]
+    local WorldOrigin = workspace:FindFirstChild("_WorldOrigin")
+local Water = WorldOrigin and WorldOrigin:FindFirstChild("Foam;")
     if Water and workspace._WorldOrigin["Foam;"] then
         Water:Destroy()
     end        
