@@ -28,6 +28,25 @@ end)
     KenTest = true
     debug = false
     Brazier1 = false
+
+local Language = "vi"
+
+local Texts = {
+    vi = {
+        Title = "Menu chức năng",
+        Start = "Bắt đầu",
+        Close = "Đóng"
+    },
+    en = {
+        Title = "Feature Menu",
+        Start = "Start",
+        Close = "Close"
+    }
+}
+
+local function GetText(key)
+    return Texts[Language][key] or key
+end
     Brazier2 = false
     Brazier3 = false
     Sec = 0.1
