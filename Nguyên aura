@@ -4054,7 +4054,7 @@ end)
 local Initialize = Tabs.Settings:AddToggle("Initialize", {
     Title = "Initialize Attack [M1/Melee/Sword]",
     Description = "[ Not Supported Gas M1 ]",
-    Default = true
+    Default = false 
 })
 Initialize:OnChanged(function(Value)
     _G.Seriality = Value
@@ -4062,7 +4062,7 @@ end)
 local Bringmob = Tabs.Settings:AddToggle("Bringmob", {
     Title = "Bring Mobs",
     Description = "",
-    Default = true
+    Default = false 
 })
 Bringmob:OnChanged(function(Value)
     _B = Value
@@ -4070,7 +4070,7 @@ end)
 local BusuAura = Tabs.Settings:AddToggle("BusuAura", {
     Title = "Auto Turn on Buso",
     Description = "",
-    Default = true
+    Default = false 
 })
 BusuAura:OnChanged(function(Value)
     Boud = Value
@@ -4174,7 +4174,7 @@ end)
 local UnDetectedAFK = Tabs.Settings:AddToggle("UnDetectedAFK", {
     Title = "Anti AFK",
     Description = "",
-    Default = true
+    Default = false 
 })
 UnDetectedAFK:OnChanged(function(Value)
     _G.AntiAFK = Value
@@ -4272,7 +4272,7 @@ StatusSelect:OnChanged(function(Value)
 end)
 
 local StatsUpg = Tabs.Settings:AddToggle("StatsUpg", {
-    Title = "Auto Melee",
+    Title = "Auto Võ",
     Description = "",
     Default = false
 })
@@ -4290,7 +4290,7 @@ spawn(function()
 end)
 
 local StatsUpg = Tabs.Settings:AddToggle("StatsUpg", {
-    Title = "Auto Swords",
+    Title = "Auto Kiếm",
     Description = "",
     Default = false
 })
@@ -4307,7 +4307,7 @@ spawn(function()
     end
 end)
 local StatsUpg = Tabs.Settings:AddToggle("StatsUpg", {
-    Title = "Auto Gun",
+    Title = "Auto Súng",
     Description = "",
     Default = false
 })
@@ -4324,7 +4324,7 @@ spawn(function()
     end
 end)
 local StatsUpg = Tabs.Settings:AddToggle("StatsUpg", {
-    Title = "Auto Blox Fruit",
+    Title = "Auto trái blox",
     Description = "",
     Default = false
 })
