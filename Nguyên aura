@@ -25,7 +25,7 @@ end)
     NPCList = {}
     shouldTween = false
     SoulGuitar = false
-    KenTest = true
+    KenTest = false 
     debug = false
     Brazier1 = false
 
@@ -1974,8 +1974,8 @@ end
 
 local Fluent = loadstring(game:HttpGet("https://raw.github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local Window = Fluent:CreateWindow({
-    Title = " nguyên",
-    SubTitle = "nguyên_aura><",
+    Title = " nguyenKz",
+    SubTitle = "nguyen_Kz><",
     TabWidth = 155,
     Size = UDim2.fromOffset(485, 370),
     Acrylic = false,
@@ -1988,7 +1988,7 @@ local Tabs = {
         Icon = ""
     }),
     Settings = Window:AddTab({
-        Title = "Config",
+        Title = "Cài đặt",
         Icon = ""
     }),
     Melee = Window:AddTab({
@@ -2004,7 +2004,7 @@ local Tabs = {
         Icon = ""
     }),
     SeaEvent = Window:AddTab({
-        Title = "Sea Events",
+        Title = "Sự kiện biển",
         Icon = ""
     }),
     Mirage = Window:AddTab({
@@ -2012,11 +2012,11 @@ local Tabs = {
         Icon = ""
     }),
     Drago = Window:AddTab({
-        Title = "Drago Dojo",
+        Title = "tộc rồng v4",
         Icon = ""
     }),
     Prehistoric = Window:AddTab({
-        Title = "Prehistoric",
+        Title = "đảo núi lửa",
         Icon = ""
     }),
     Raids = Window:AddTab({
@@ -2024,7 +2024,7 @@ local Tabs = {
         Icon = ""
     }),
     Combat = Window:AddTab({
-        Title = "Combat PVP",
+        Title = "PVP",
         Icon = ""
     }),
     Travel = Window:AddTab({
@@ -2040,7 +2040,7 @@ local Tabs = {
         Icon = ""
     }),
     Misc = Window:AddTab({
-        Title = "Misc",
+        Title = "khác",
         Icon = ""
     })
 }
@@ -2093,7 +2093,7 @@ spawn(function()
     end
 end)
 local TravelDress = Tabs.Main:AddToggle("TravelDress", {
-    Title = "Auto Travel Dressrosa",
+    Title = "Auto lên sea 2",
     Description = "",
     Default = false
 })
@@ -2135,7 +2135,7 @@ spawn(function()
     end
 end)
 local Zou = Tabs.Main:AddToggle("Zou", {
-    Title = "Auto Zou Quest",
+    Title = "Auto lên sea 3",
     Description = "",
     Default = false
 })
@@ -2281,7 +2281,7 @@ end)
 Tabs.Main:AddSection("Miscellanea / Quest")
 
 local ClosetMons = Tabs.Main:AddToggle("ClosetMons", {
-    Title = "Auto Farm Nearest",
+    Title = "Auto Farm quái ở gần",
     Description = "",
     Default = false
 })
@@ -2307,7 +2307,7 @@ spawn(function()
     end
 end)
 local FactoryRaids = Tabs.Main:AddToggle("FactoryRaids", {
-    Title = "Auto Factory Raid",
+    Title = "Auto đánh nhà máy",
     Description = "",
     Default = false
 })
@@ -2333,7 +2333,7 @@ spawn(function()
     end
 end)
 local CastleRaids = Tabs.Main:AddToggle("CastleRaids", {
-    Title = "Auto Pirate Raid",
+    Title = "Auto đánh hải tặc",
     Description = "",
     Default = false
 })
@@ -2396,7 +2396,7 @@ spawn(function()
     end
 end)
 Test = Tabs.Main:AddDropdown("Test", {
-    Title = "Choose Material",
+    Title = "chọn nguyên liệu",
     Values = MaterialList,
     Multi = false,
     Default = nil
@@ -2405,7 +2405,7 @@ Test:OnChanged(function(Value)
     getgenv().SelectMaterial = Value
 end)
 Toggle = Tabs.Main:AddToggle("Toggle", {
-    Title = "Auto Materials",
+    Title = "Auto farm nguyên liệu đã chọn",
     Description = "",
     Default = false
 })
@@ -2650,7 +2650,7 @@ spawn(function()
     end
 end)
 local Berry = Tabs.Main:AddToggle("Berry", {
-    Title = "Auto Collect Berry",
+    Title = "Auto nhặt Berry",
     Description = "",
     Default = false
 })
@@ -2686,7 +2686,7 @@ spawn(function()
     end
 end)
 local Chest = Tabs.Main:AddToggle("Chest", {
-    Title = "Auto Collect Chest",
+    Title = "Auto nhặt rương",
     Description = "",
     Default = false
 })
@@ -2739,7 +2739,7 @@ Mastery_Config:OnChanged(function(Value)
     SelectIsland = Value
 end)
 local MasteryFruits = Tabs.Main:AddToggle("MasteryFruits", {
-    Title = "Auto Mastery Fruits",
+    Title = "Auto cầy thông thạo trái",
     Description = "",
     Default = false
 })
@@ -2795,7 +2795,7 @@ spawn(function()
     end
 end)
 local MasteryGun = Tabs.Main:AddToggle("MasteryGun", {
-    Title = "Auto Mastery Gun",
+    Title = "Auto cầy thông thạo súng",
     Description = "",
     Default = false
 })
@@ -2892,7 +2892,7 @@ spawn(function()
     end
 end)
 local MasterySword = Tabs.Main:AddToggle("MasterySword", {
-    Title = "Auto Mastery All Sword",
+    Title = "Auto cày thông thạo kiếm",
     Description = "",
     Default = false
 })
@@ -3085,7 +3085,7 @@ spawn(function()
     end
 end)
 local Q = Tabs.Main:AddToggle("Q", {
-    Title = "Auto Bones",
+    Title = "Auto Farm xương",
     Description = "",
     Default = false
 })
