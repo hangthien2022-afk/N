@@ -2996,7 +2996,7 @@ spawn(function()
     end
 end)
 local Q = Tabs.Main:AddToggle("Q", {
-    Title = "Auto Cake Prince",
+    Title = "Auto Đánh Ktacuri v1",
     Description = "",
     Default = false
 })
