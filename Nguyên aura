@@ -3224,7 +3224,7 @@ spawn(function()
     end
 end)
 local Q = Tabs.Main:AddToggle("Q", {
-    Title = "Auto Random Bones",
+    Title = "Auto Random Xương",
     Description = "",
     Default = false
 })
@@ -3703,7 +3703,7 @@ spawn(function()
 end)
 Tabs.Main:AddSection("Upgrade Races V3")
 local Q = Tabs.Main:AddToggle("Q", {
-    Title = "Auto Upgrade Mink V3",
+    Title = "Auto Up tộc thỏ V3",
     Description = "",
     Default = false
 })
@@ -3748,7 +3748,7 @@ spawn(function()
     end
 end)
 local Q = Tabs.Main:AddToggle("Q", {
-    Title = "Auto Upgrade Human V3",
+    Title = "Auto Up tộc người V3",
     Description = "",
     Default = false
 })
@@ -8699,7 +8699,7 @@ spawn(function()
     end)
 end)
 local Q = Tabs.Raids:AddToggle("Q", {
-    Title = "Kill Aura",
+    Title = "Sức Mạnh Kill Aura",
     Description = "",
     Default = false
 })
@@ -9552,7 +9552,7 @@ Q:OnChanged(function(Value)
 end)
 
 Q = Tabs.Combat:AddToggle("Q", {
-    Title = "Esp Chests",
+    Title = "Esp Rương",
     Description = "",
     Default = false
 })
@@ -9565,7 +9565,7 @@ Q:OnChanged(function(Value)
 end)
 
 Q = Tabs.Combat:AddToggle("Q", {
-    Title = "Esp Fruits",
+    Title = "Esp Trái Ác Quỷ",
     Description = "",
     Default = false
 })
@@ -9604,7 +9604,7 @@ if World2 then
         end
     end)
     Q = Tabs.Combat:AddToggle("Q", {
-        Title = "Esp Legendary Sword",
+        Title = "Esp Người bán kiếm huyền thoại",
         Description = "",
         Default = false
     })
@@ -9634,7 +9634,7 @@ end
 
 if World3 then
     Q = Tabs.Combat:AddToggle("Q", {
-        Title = "Esp Gears",
+        Title = "Esp Bánh Răng",
         Description = "",
         Default = false
     })
