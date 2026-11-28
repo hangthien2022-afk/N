@@ -1,3 +1,13 @@
+if not game:IsLoaded() then game.Loaded:Wait() end
+
+-- Tự động dọn dẹp Menu cũ để chống kẹt khi Execute lại
+local CoreGui = game:GetService("CoreGui")
+local PlayerGui = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+
+for _, gui in pairs({CoreGui, PlayerGui}) do
+    if gui:FindFirstChild("Fluent") then pcall(function() gui.Fluent:Destroy() end) end
+    if gui:FindFirstChild("NguyenKzHubToggle") then pcall(function() gui.NguyenKzHubToggle:Destroy() end) end
+end
 do
     ply = game.Players
     plr = ply.LocalPlayer
