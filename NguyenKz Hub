@@ -1,13 +1,43 @@
-if not game:IsLoaded() then game.Loaded:Wait() end
+-- ==================================================
+-- NGUYENKZ HUB - BỘ KHỞI TẠO BẬT MENU NGAY LẬP TỨC
+-- ==================================================
 
--- Tự động dọn dẹp Menu cũ để chống kẹt khi Execute lại
-local CoreGui = game:GetService("CoreGui")
-local PlayerGui = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
-
-for _, gui in pairs({CoreGui, PlayerGui}) do
-    if gui:FindFirstChild("Fluent") then pcall(function() gui.Fluent:Destroy() end) end
-    if gui:FindFirstChild("NguyenKzHubToggle") then pcall(function() gui.NguyenKzHubToggle:Destroy() end) end
+-- 1. Chờ game nạp xong an toàn (Chống treo script)
+if not game:IsLoaded() then
+    pcall(function() game.Loaded:Wait() end)
 end
+
+local Players = game:GetService("Players")
+local CoreGui = game:GetService("CoreGui")
+local LocalPlayer = Players.LocalPlayer or Players.PlayerAdded:Wait()
+local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
+
+-- 2. Đã tích hợp sẵn Code dọn dẹp RAM ở đây
+for _, container in pairs({CoreGui, PlayerGui}) do
+    if container:FindFirstChild("Fluent") then pcall(function() container.Fluent:Destroy() end) end
+    if container:FindFirstChild("NguyenKzHubToggle") then pcall(function() container.NguyenKzHubToggle:Destroy() end) end
+end
+
+-- 3. Nạp thư viện Fluent UI an toàn
+local Success, Fluent = pcall(function()
+    return loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+end)
+
+if not Success or not Fluent then
+    warn("[NguyenKz Hub]: Lỗi nạp Fluent UI!")
+    return
+end
+
+-- 4. Khởi tạo Cửa sổ Menu NguyenKz Hub
+local Window = Fluent:CreateWindow({
+    Title = "NguyenKz Hub",
+    SubTitle = "Official Menu",
+    TabWidth = 155,
+    Size = UDim2.fromOffset(485, 370),
+    Acrylic = false,
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.End
+})
 do
     ply = game.Players
     plr = ply.LocalPlayer
@@ -64,10 +94,6 @@ end
     Num_self = 25
 end
 
-repeat
-    local start = plr.PlayerGui:WaitForChild("Main"):WaitForChild("Loading") and game:IsLoaded()
-    wait()
-until start
 World1 = game.PlaceId == 2753915549
 World2 = game.PlaceId == 4442272183
 World3 = game.PlaceId == 7449423635
